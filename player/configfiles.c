@@ -451,7 +451,8 @@ void mp_load_playback_resume(struct MPContext *mpctx, const char *file)
         MP_INFO(mpctx, "Resuming playback. This behavior can "
                "be disabled with --no-resume-playback.\n");
         try_load_config(mpctx, fname, M_SETOPT_PRESERVE_CMDLINE, MSGL_V);
-        unlink(fname);
+        if (!mpctx->opts->position_keep)
+            unlink(fname);
     }
     talloc_free(fname);
 }

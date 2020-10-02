@@ -740,6 +740,14 @@ Program Behavior
     This behavior is disabled by default, but is always available when quitting
     the player with Shift+Q.
 
+``--keep-position``
+    When resuming from a saved position (created by specifying
+    ``--save-position-on-quit`` or exiting with Shift+Q), mpv normally deletes
+    the saved position file on start-up. Specifying this switch causes mpv to
+    keep it, so that should mpv exit abnormally, the next startup would resume
+    from the last saved position instead of the very beginning. Generally, this
+    option only makes sense together with ``--save-position-on-quit``.
+
 ``--watch-later-directory=<path>``
     The directory in which to store the "watch later" temporary files.
 

@@ -680,6 +680,7 @@ static const m_option_t mp_opts[] = {
     {"resume-playback", OPT_FLAG(position_resume)},
     {"resume-playback-check-mtime", OPT_FLAG(position_check_mtime)},
     {"save-position-on-quit", OPT_FLAG(position_save_on_quit)},
+    {"keep-position", OPT_FLAG(position_keep)},
     {"write-filename-in-watch-later-config",
         OPT_FLAG(write_filename_in_watch_later_config)},
     {"ignore-path-in-watch-later-config",
